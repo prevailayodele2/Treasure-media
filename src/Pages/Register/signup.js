@@ -14,7 +14,7 @@ import {
 
 export default function Signup() {
   const dispatch = useDispatch();
-  //const { isFetching, error } = useSelector((state) => state.user);
+  const { isFetching, error } = useSelector((state) => state.user);
   const user = useSelector((state) => state.user);
   console.log(user)
   const [email, setEmail] = useState('');
