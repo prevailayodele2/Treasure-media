@@ -19,7 +19,7 @@ export default function Leftbar() {
     const getPost = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/user/follower/post/${id}`,
+          `https://treasure-media-api.onrender.com/api/user/follower/post/${id}`,
           {
             headers: {
               token: accesstoken,

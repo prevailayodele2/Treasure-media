@@ -5,7 +5,7 @@ export default function Forgotpassword() {
   const [email, setEmail] = useState('');
   const handleclick = async (e) => {
     e.preventDefault();
-    await fetch(`http://localhost:5000/api/user/forgetpassword`, {
+    await fetch(`https://treasure-media-api.onrender.com/api/user/forgetpassword`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/JSON' },
       body: JSON.stringify({ email: email }),

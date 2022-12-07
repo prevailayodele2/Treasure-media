@@ -13,7 +13,7 @@ export default function ProfileMainPost() {
   useEffect(() => {
     const getPost = async()=>{
       try {
-        const res = await axios.get(`http://localhost:5000/api/post/get/post/${id}`)
+        const res = await axios.get(`https://treasure-media-api.onrender.com/api/post/get/post/${id}`)
         setPost(res.data.sort((p1, p2) => {
           return new Date(p2.createdAt) - new Date(p1.createdAt);
         }));

@@ -18,7 +18,7 @@ export default function MainPost() {
   useEffect(() => {
    const getPost = async()=>{
     try {
-      const res = await axios.get(`http://localhost:5000/api/user/follower/post/${id}` , {
+      const res = await axios.get(`https://treasure-media-api.onrender.com/api/user/follower/post/${id}` , {
         headers:{
           token:accesstoken
         }

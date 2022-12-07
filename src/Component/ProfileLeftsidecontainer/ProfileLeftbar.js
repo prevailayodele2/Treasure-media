@@ -23,7 +23,7 @@ export default function ProfileLeftbar() {
     const getuser = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/user/post/user/details/${id}`
+          `https://treasure-media-api.onrender.com/api/user/post/user/details/${id}`
         );
         setuser(res.data);
       } catch (error) {
@@ -40,7 +40,7 @@ export default function ProfileLeftbar() {
     const getFollowing = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/user/following/${id}`
+          `https://treasure-media-api.onrender.com/api/user/following/${id}`
         );
         setFollowinguser(res.data);
       } catch (error) {
@@ -52,14 +52,14 @@ export default function ProfileLeftbar() {
 
   const handleFollow = async () => {
     if (Follow === 'Follow') {
-      await fetch(`http://localhost:5000/api/user/following/user/${id}`, {
+      await fetch(`https://treasure-media-api.onrender.com/api/user/following/user/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/JSON', token: accessToken },
         body: JSON.stringify({ user: `${user.other._id}` }),
       });
       setUnFollow('UnFollow');
     } else {
-      await fetch(`http://localhost:5000/api/user/following/user/${id}`, {
+      await fetch(`https://treasure-media-api.onrender.com/api/user/following/user/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/JSON', token: accessToken },
         body: JSON.stringify({ user: `${user.other._id}` }),

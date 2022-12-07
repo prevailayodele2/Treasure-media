@@ -16,7 +16,7 @@ export default function Rightbar() {
   useEffect(() => {
     const getuser = async()=>{
       try {
-        const res  = await axios.get(`http://localhost:5000/api/user/all/user/${id}`)
+        const res  = await axios.get(`https://treasure-media-api.onrender.com/api/user/all/user/${id}`)
         setUsers(res.data);
       } catch (error) {
         console.log("Some error occured")

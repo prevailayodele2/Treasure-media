@@ -18,7 +18,7 @@ export default function Post({ post }) {
     const getuser = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/user/post/user/details/${post.user}`
+          `https://treasure-media-api.onrender.com/api/user/post/user/details/${post.user}`
         );
         setuser(res.data);
       } catch (error) {
@@ -39,14 +39,14 @@ export default function Post({ post }) {
 
   const handleLike = async () => {
     if (Like == LikeIcon) {
-      await fetch(`http://localhost:5000/api/post/${post._id}/like`, {
+      await fetch(`https://treasure-media-api.onrender.com/api/post/${post._id}/like`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/Json', token: accessToken },
       });
       setLike(anotherlikeicon);
       setCount(count + 1);
     } else {
-      await fetch(`http://localhost:5000/api/post/${post._id}/like`, {
+      await fetch(`https://treasure-media-api.onrender.com/api/post/${post._id}/like`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/Json', token: accessToken },
       });
@@ -62,7 +62,7 @@ export default function Post({ post }) {
       comment: `${commentwriting}`,
       profile: `${users.other?.profile}`,
     };
-    await fetch(`http://localhost:5000/api/post/comment/post`, {
+    await fetch(`https://treasure-media-api.onrender.com/api/post/comment/post`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/Json', token: accessToken },
       body: JSON.stringify(comment),

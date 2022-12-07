@@ -10,7 +10,7 @@ export default function Resetpassword() {
   console.log(password);
   const handleClick = async (e) => {
     e.preventDefault();
-    await fetch(`http://localhost:5000/api/user/reset/password?${code}`, {
+    await fetch(`https://treasure-media-api.onrender.com/api/user/reset/password?${code}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/JSON' },
       body: JSON.stringify({ password: password }),

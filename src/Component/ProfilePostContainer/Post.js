@@ -20,7 +20,7 @@ export default function Post({ detail }) {
     const getuser = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/user/post/user/details/${detail.user}`
+          `https://treasure-media-api.onrender.com/api/user/post/user/details/${detail.user}`
         );
         setuser(res.data);
       } catch (error) {
