@@ -47,7 +47,7 @@ export default function Rightbar() {
       </div>
 
       <div className='rightsuggestcontainer2'>
-        <Stack sx={{ display: 'flex', justifyContent:'center'}} p={3} >
+        <Stack sx={{ display: 'flex', justifyContent:'center', width: '100%', height: '100%', overflowY: 'scroll'}}  p={3} >
         <h3 style={{color: '#fff',}}>Suggested for you</h3>
         <Divider  />
         {users.map((item)=>(

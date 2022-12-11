@@ -41,6 +41,7 @@
   height: auto;
   max-height: 60vh ;
   flex-direction: column;
+  overflow: hidden;
   border-radius: 20px;
   background-color: #28353e;
   background: #28353e;
