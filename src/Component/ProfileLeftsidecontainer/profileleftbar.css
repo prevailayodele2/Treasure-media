@@ -1,38 +1,42 @@
-.ProfileLeftbar{
-          flex: 1;
-
+.ProfileLeftbar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    margin-top: 20px;
 }
 
-.NotificationsContainer{
-          width: 18pc;
-          height: 50vh;
-          background-color: white;
-          margin-top: 20px;
-          border-radius: 20px;
-          overflow: hidden;
-          overflow-y: scroll;
+.NotificationsContainer {
+  width: 18pc;
+  height: auto;
+  max-height: 50vh;
+  background-color: #28353e;
+  background: #28353e;
+  border-radius: 20px;
+  /* overflow: hidden;
+  overflow-y: scroll; */
+}
+.NotificationsContainer h3{
+    color: #fff;
+    font-style: italic;
+ }
+
+.Profilepageimage {
+  width: 60px;
+  border-radius: 50%;
+  height: 60px;
+  object-fit: cover;
+  margin-left: 10px;
+}
+.ProfilepageCover {
+  width: 270px;
+  height: 100px;
+  object-fit: cover;
 }
 
-.Profilepageimage{
-          width: 60px;
-          border-radius: 50%;
-          height: 60px;
-          object-fit: cover;
-          margin-left: 10px;
-
+.friendimage {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
 }
-.ProfilepageCover{
-          width: 270px;
-          height: 100px;
-          object-fit: cover;
-
-
-}
-
-.friendimage{
-          width: 80px;
-          height: 80px;
-          object-fit: cover;
-          border-radius: 10px;
-}
-

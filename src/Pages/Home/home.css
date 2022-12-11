@@ -1,9 +1,14 @@
-.home{
-          background-color: rgb(235, 238, 242);
+.home{    
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #05141c;
+    background: rgb(5,20,28);
 }
 
 .ComponentContainer{
-          width: 80%;
+          width: 89%;
           margin: auto;
           display: flex;
           justify-content: space-between;

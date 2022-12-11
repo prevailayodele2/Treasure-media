@@ -1,18 +1,21 @@
 import React from 'react';
 import './contentpost.css';
-import imageIcon from '../Images/gallery.png';
-import emojiIcon from '../Images/cat-face.png';
-import VideoIcon from '../Images/video.png';
+// import imageIcon from '../Images/gallery.png';
+// import emojiIcon from '../Images/cat-face.png';
+// import VideoIcon from '../Images/video.png';
 //import profileimage from '../Images/Profile.png';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
+import { ImageSquare, PaperPlaneTilt, YoutubeLogo } from 'phosphor-react'
 import app from '../../firebase';
+import { Tooltip } from '@mui/material'
 import {
   getStorage,
   ref,
   uploadBytesResumable,
   getDownloadURL,
 } from 'firebase/storage';
+
 export default function ContentPost() {
 
   const userDetails = useSelector((state) => state.user);
@@ -62,7 +65,7 @@ export default function ContentPost() {
                 token: accessToken,
               },
               body: JSON.stringify({
-                title: title,
+                title: title !== ' ' || null || undefined ? title : ' ',
                 image: downloadURL,
                 video: '',
               }),
@@ -107,7 +110,7 @@ export default function ContentPost() {
                 token: accessToken,
               },
               body: JSON.stringify({
-                title: title,
+                title: title !== ' ' || null || undefined ? title : ' ',
                 video: downloadURL,
                 image: '',
               }),
@@ -132,20 +135,22 @@ export default function ContentPost() {
   return (
     <div>
       <div className="ContentUploadContainer">
-        <div style={{ display: 'flex', alignItems: 'center', padding: 10 }}>
+        <div className='first-div'>
           <img
             src={`${user?.other?.profile}`}
             className="profileimage"
             alt=""
           />
+        </div>
+        <div className='second-div'>
+          <div className='captionInput'>
           <input
             type="text"
             className="contentWritingpart"
             placeholder="Write your real thought....."
             onChange={(e) => setTile(e.target.value)}
-          />
-        </div>
-        <div style={{ marginLeft: '10px' }}>
+            />
+            </div>
           {imagePre !== null ? (
             <img
               src={imagePre}
@@ -164,10 +169,12 @@ export default function ContentPost() {
           ) : (
             ''
           )}
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <div>
-              <label htmlFor="file">
-                <img src={`${imageIcon}`} className="icons" alt="" />
+          <div className='post-footer'>
+            <div className='post-footer-first-div'>
+              <Tooltip title='Upload Photo' placement='bottom'>
+              <label className='photos' htmlFor="file">
+               <ImageSquare size={24} color='#41e30b' />
+                <span>Photos</span>
                 <input
                   type="file"
                   name="file"
@@ -177,11 +184,14 @@ export default function ContentPost() {
                     setFile(e.target.files[0]),
                     setImagePre(URL.createObjectURL(e.target.files[0])),
                   ]}
-                />
+                  />
               </label>
-              <img src={`${emojiIcon}`} className="icons" alt="" />
-              <label htmlFor="file2">
-                <img src={`${VideoIcon}`} className="icons" alt="" />
+                  </Tooltip>
+              {/* <img src={`${emojiIcon}`} className="icons" alt="" /> */}
+              <Tooltip title='Upload Video' placement='bottom'>
+              <label className='videos' htmlFor="file2">
+                <YoutubeLogo size={24} color='blue' />
+                <span>Video</span>
                 <input
                   type="file"
                   name="file2"
@@ -191,28 +201,19 @@ export default function ContentPost() {
                     setFile2(e.target.files[0]),
                     setVideoPre(URL.createObjectURL(e.target.files[0])),
                   ]}
-                />
+                  />
               </label>
+                  </Tooltip>
             </div>
+            <Tooltip title='Upload Post' placement='bottom'>
             <button
-              style={{
-                height: '30px',
-                marginRight: '12px',
-                marginTop: '40px',
-                paddingLeft: '20px',
-                paddingRight: '20px',
-                paddingTop: 6,
-                paddingBottom: 6,
-                border: 'none',
-                backgroundColor: 'black',
-                color: 'white',
-                borderRadius: '5px',
-                cursor: 'pointer',
-              }}
+              className='post-button-upload'
               onClick={handlePost}
-            >
+              >
               Post
+              <PaperPlaneTilt size={21} color='#fff' />
             </button>
+              </Tooltip>
           </div>
         </div>
       </div>

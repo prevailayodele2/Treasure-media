@@ -1,42 +1,86 @@
-.Leftbar{
-          flex: 1;
+.Leftbar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 23px;
 }
-.NotificationsContainer{
-          width: 18pc;
-          height: 60vh;
-          background-color: white;
-          margin-top: 20px;
-          border-radius: 20px;
-          overflow: hidden;
-          overflow-y: scroll;
+.NotificationsContainerzzyy {
+  width: 18pc;
+  max-width: 60vh;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+  height: auto;
+  background-color: #28353e;
+  background: #28353e;
+  border-radius: 20px;
+}
+.NotificationsContainerzzyy img{
+    width: 120px;
+    height: 100px;
+    margin-left: 28px;
+    border-radius: 30px;
+    padding-bottom: 15px;
+    object-fit: cover;
+}
+.NotificationsContainerzzyy .name{
+    font-size: 21px;
+text-transform: capitalize;
+    font-weight: 500;
+    color: #fff;
+}
+.NotificationsContainerzzyy .description{
+    font-size: 19px;
+    font-weight: 300;
+    padding: 8px 0;
+    color: #aaaaaad0;
+    font-style: italic;
+}
+.followzz{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+.followzz .One{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.followzz .One span{
+   color: #fff;
+   font-weight: 500;
+   font-size: 18px;
+   text-transform: capitalize;
+}
+.view-profile{
+     text-decoration: none ;
+     font-size: 20px;
+    padding: 10px 0;
+}
+.view-profile:hover{
+   text-decoration: underline;
+}
+.NotificationsContainerzz {
+  width: 18pc;
+  max-width: 60vh;
+  justify-content: center;
+  height: auto;
+  background-color: #28353e;
+  background: #28353e;
+  border-radius: 20px;
 }
 
-.notificationimg{
-          width:37px;
-          height: 37px;
-          border-radius: 50%;
-          margin-left: 10px;
-}
-.followinguserimage{
-          width: 35px;
-          height: 35px;
-          border-radius: 50%;
-          margin-left: 40px;
-
+.exploreimage {
+  width: 86px;
+  margin-left: 4px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-top: 6px;
 }
 
-.likeimage{
-          width: 30px;
-          height: 30px;
-          margin-left: 43px;
-          border-radius: 3px;
-}
-
-.exploreimage{
-          width: 86px;
-          margin-left: 4px;
-          height: 150px;
-          object-fit: cover;
-          border-radius: 4px;
-          margin-top: 6px;
-}

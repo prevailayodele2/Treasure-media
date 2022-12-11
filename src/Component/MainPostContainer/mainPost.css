@@ -1,4 +1,9 @@
 .mainPostContainer{
           flex: 3;
-          
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 20px;
 }

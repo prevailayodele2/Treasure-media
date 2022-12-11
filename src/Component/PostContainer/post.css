@@ -1,52 +1,100 @@
-/* .PostContainer{
-
-} */
-
-.SubPostContainer{
-          width: 93%;
-          background-color: white;
-          margin-top: 20px;
-          margin-left: 20px;
-          border-radius: 10px;
+.PostContainerdd{
+    width: 87%;
+    height: auto;
+    border-radius: 10px;
 }
 
-.PostImage{
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          margin-left: 10px;
+.SubPostContainerss {
+ padding: 20px;
+ border-radius: 20px;
+ background-color: #28353e;
+ background: #28353e;
 }
-.PostImages{
-          width: 500px;
-          height: 450px;
-          object-fit: cover;
-          border-radius: 10px;
+.postcontainer-header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.post-captionss{
+    display: flex;
+    width: 90%;
+}
+.post-captionss p{
+    display: flex;
+    font-size: 19px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    width: auto;
+    flex-wrap: wrap;
 }
 
-.iconsforPost{
-          width: 20px;
-          
+.PostImage {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.PostImagess {
+  width: 600px;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.moreicons{
-          width: 20px;
-          margin-left: 380px;
+.iconsforPost {
+  width: 25px;
 }
 
-.commentinput{
-          width: 24pc;
-          margin-left: 10px;
-          border: none;
-
+.moreicons {
+  width: 20px;
+  margin-left: 380px;
 }
-.addCommentbtn{
-          padding: 9px;
-          border: none;
-          background-color: black;
-          color: white;
-          border-radius: 6px;
-          margin-left: 39px;
-          cursor: pointer;
-          padding-left: 40px;
-          padding-right: 40px;
+
+.commentinput {
+  width: auto;
+  height: 32px;
+  background-color: #28353e;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  border: 3px solid black;
+}
+.addCommentbtn {
+    background-color: #131313;
+    border: none;
+    color:#fff ;
+    border-radius: 13px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 19px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.addCommentbtn:hover{
+    background: inherit;
+    border: 2px solid black;
+}
+.Comment-container-post{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+}
+.write-coment-post{
+    display: flex;
+    width: 100%;
+    flex-direction: row ;
+    align-items: center;
+    justify-content: space-between;
+}
+.comment-show-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
 }

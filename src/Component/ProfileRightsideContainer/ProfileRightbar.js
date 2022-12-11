@@ -1,73 +1,103 @@
-import React, { useEffect, useState } from 'react'
-import "./profilerightbar.css"
+import React, { useEffect, useState } from 'react';
+import './profilerightbar.css';
 import axios from 'axios';
 import Follow from '../RightsideContainer/Follow';
 import { useSelector } from 'react-redux';
+import { Divider, Stack } from '@mui/material';
 import { useLocation } from 'react-router-dom';
 export default function ProfileRightbar() {
-  const userDetails = useSelector((state)=>state.user);
-  let user = userDetails.user
+  const userDetails = useSelector((state) => state.user);
+  let user = userDetails.user;
   let location = useLocation();
-  let id = location.pathname.split("/")[2];
-  let idforSuggest = user?.other?._id
-  const [Followinguser , setFollowinguser] = useState([]);
+  let id = location.pathname.split('/')[2];
+  let idforSuggest = user?.other?._id;
+  const [Followinguser, setFollowinguser] = useState([]);
   useEffect(() => {
-    const getFollowing = async()=>{
+    const getFollowing = async () => {
       try {
-        const res = await axios.get(`https://treasure-media-api.onrender.com/api/user/followers/${id}`);
+        const res = await axios.get(
+          `https://treasure-media-api.onrender.com/api/user/followers/${id}`
+        );
         setFollowinguser(res.data);
       } catch (error) {
-        console.log("Error")
+        console.log('Error');
       }
-    }
+    };
     getFollowing();
-  }, [id])
+  }, [id]);
 
-  console.log(Followinguser)
+  console.log(Followinguser);
 
-  const [users , setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
   useEffect(() => {
-    const getuser = async()=>{
+    const getuser = async () => {
       try {
-        const res  = await axios.get(`https://treasure-media-api.onrender.com/api/user/all/user/${idforSuggest}`)
+        const res = await axios.get(
+          `https://treasure-media-api.onrender.com/api/user/all/user/${idforSuggest}`
+        );
         setUsers(res.data);
       } catch (error) {
-        console.log("Some error occured")
+        console.log('Some error occured');
       }
-    }
+    };
     getuser();
-  }, [idforSuggest])
-  console.log(users)
-  
+  }, [idforSuggest]);
+  console.log(users);
+
   return (
-    <div className='Profilerightbar'>
-      <div className='profilerightcontainer'>
-        <h3>Followers</h3>
-        <div>
-          {Followinguser.map((item)=>(
-            <div style={{marginTop:"10px"}}>
-             <div style={{display:'flex' , alignItems:"center" , marginLeft:10 , cursor:"pointer"}}>
-              <img src={`${item.profile}`} className="Friendsimage" alt="" />
-              <p style={{textAlign:"start"  , marginLeft:"10px"}}>{item.username} </p>
-            </div>
-          </div>
+    <div className="Profilerightbarr">
+      <div className="profilerightcontainercc">
+        <Stack p={2}>
+          <h3>Followers</h3>
+          <Divider />
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '10px',
+              paddingTop: '10px',
+            }}
+          >
+            {Followinguser.map((item, i) => (
+              <div key={i} className="followingfollow">
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '20px',
+                    cursor: 'pointer',
+                  }}
+                >
+                  <img
+                    src={`${item.profile}`}
+                    className="Friendsimage"
+                    alt=""
+                  />
+                  <p
+                    style={{
+                      fontSize: 19,
+                      fontWeight: 500,
+                      fontStyle: 'italic',
+                      color: '#fff',
+                    }}
+                  >
+                    {item.username}{' '}
+                  </p>
+                </div>
+              </div>
             ))}
-          
-          
-          
-        </div>
-
+          </div>
+        </Stack>
       </div>
 
-      <div className='rightcontainer2'>
-        <h3 style={{textAlign:"start" , marginLeft:"10px"}}>Suggested for you</h3>
-        {users.map((item)=>(
-          <Follow userdetails={item}/>
+      <div className="rightcontainer23">
+        <Stack p={2}>
+          <h3 style={{ textAlign: 'start', color: '#fff', }}>Suggested for you</h3>
+          {users.map((item) => (
+            <Follow userdetails={item} />
           ))}
-        
+        </Stack>
       </div>
-
-
     </div>
-  )
+  );
 }

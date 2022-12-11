@@ -6,6 +6,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
+import { Divider, Stack } from '@mui/material';
 export default function ProfileLeftbar() {
   let location = useLocation();
   let id = location.pathname.split('/')[2];
@@ -52,18 +53,24 @@ export default function ProfileLeftbar() {
 
   const handleFollow = async () => {
     if (Follow === 'Follow') {
-      await fetch(`https://treasure-media-api.onrender.com/api/user/following/user/${id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/JSON', token: accessToken },
-        body: JSON.stringify({ user: `${user.other._id}` }),
-      });
+      await fetch(
+        `https://treasure-media-api.onrender.com/api/user/following/user/${id}`,
+        {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/JSON', token: accessToken },
+          body: JSON.stringify({ user: `${user.other._id}` }),
+        }
+      );
       setUnFollow('UnFollow');
     } else {
-      await fetch(`https://treasure-media-api.onrender.com/api/user/following/user/${id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/JSON', token: accessToken },
-        body: JSON.stringify({ user: `${user.other._id}` }),
-      });
+      await fetch(
+        `https://treasure-media-api.onrender.com/api/user/following/user/${id}`,
+        {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/JSON', token: accessToken },
+          body: JSON.stringify({ user: `${user.other._id}` }),
+        }
+      );
       setUnFollow('Follow');
     }
   };
@@ -72,146 +79,69 @@ export default function ProfileLeftbar() {
 
   return (
     <div className="ProfileLeftbar">
-      <div className="NotificationsContainer">
-        <img src={`${image}`} className="ProfilepageCover" alt="" />
-        <div style={{ display: 'flex', alignItems: 'center', marginTop: -30 }}>
-          <img src={`${users.profile}`} className="Profilepageimage" alt="" />
-          <div>
-            <p
-              style={{
-                marginLeft: 6,
-                marginTop: 20,
-                color: 'black',
-                textAlign: 'start',
-              }}
-            >
-              {users.username}
-            </p>
-            <p
-              style={{
-                marginLeft: 6,
-                color: 'black',
-                textAlign: 'start',
-                marginTop: -16,
-                fontSize: 11,
-              }}
-            >
-              Software Developer
-            </p>
+       <div className="NotificationsContainerzzyy">
+        <Stack p={2}>
+         <img src={user?.other?.profile} alt="" />
+         <span className='name'>{user?.other?.username}</span>
+         <span className='description'>I think i am in love</span>
+         <Divider />
+         <div className="followzz">
+          <div className='One'>
+            <span>{user?.other?.Following.length}</span>
+            <span style={{color: '#aaaaaad0'}}>Following</span>
           </div>
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <p style={{ color: 'black', marginLeft: 20, fontSize: '14px' }}>
-            Followings
-          </p>
-          <p
-            style={{
-              color: 'black',
-              marginRight: 20,
-              fontSize: '12px',
-              marginTop: 17,
-            }}
-          >
-            {followingCounter}
-          </p>
-        </div>
-
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            marginTop: -20,
-          }}
-        >
-          <p style={{ color: 'black', marginLeft: 20, fontSize: '14px' }}>
-            Followers
-          </p>
-          <p
-            style={{
-              color: 'black',
-              marginRight: 20,
-              fontSize: '12px',
-              marginTop: 17,
-            }}
-          >
-            {followersCounter}
-          </p>
-        </div>
-        <div style={{ marginTop: -20 }}>
-          <h5
-            style={{
-              color: 'black',
-              marginLeft: 10,
-              fontSize: '14px',
-              marginRight: 30,
-              marginTop: 30,
-              textAlign: 'start',
-            }}
-          >
-            User bio
-          </h5>
-          <p
-            style={{
-              color: 'black',
-              fontSize: '12px',
-              marginTop: -20,
-              textAlign: 'start',
-              marginLeft: '10px',
-            }}
-          >
-            I would rather be despised of who I am, rather than loved by who I
-            am not.
-          </p>
-        </div>
-        {user.other._id !== id ? (
-          <div onClick={handleFollow}>
-            <button
-              style={{
-                width: '100%',
-                paddingTop: 7,
-                paddingBottom: 7,
-                border: 'none',
-                backgroundColor: 'green',
-                color: 'white',
-              }}
-            >
-              {Follow}
-            </button>
+          <Divider variant='middle' orientation='vertical' flexItem sx={{color: '#fff'}} />
+          <div className='One'>
+            <span>{user?.other?.Followers.length}</span>
+            <span style={{color: '#aaaaaae0'}}>Followers</span>
           </div>
-        ) : (
-          <div>
-            <button
-              style={{
-                width: '100%',
-                paddingTop: 7,
-                paddingBottom: 7,
-                border: 'none',
-                backgroundColor: 'green',
-                color: 'white',
-              }}
-            >
-              Edit Bio
-            </button>
-          </div>
-        )}
+         </div>
+         <Divider />
+         <Link className='view-profile' to={`/Profile/${id}`}>Edit Bio</Link>
+        </Stack>
       </div>
 
       <div className="NotificationsContainer">
-        <h3>Followings</h3>
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <p style={{ marginLeft: 10 }}>Friends</p>
-          <p style={{ marginRight: 10, color: '#aaa' }}>See all</p>
-        </div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', marginLeft: 5 }}>
-          {Followinguser.map((item) => (
-            <Link to={`/Profile/${item._id}`}>
-              <div style={{ marginLeft: 4, cursor: 'pointer' }} key={item._id}>
-                <img src={`${item?.profile}`} className="friendimage" alt="" />
-                <p style={{ marginTop: -2 }}>{item?.username}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <Stack p={2}>
+          <h3>Followings</h3>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <p style={{}}>Friends</p>
+            <p style={{ color: '#aaa' }}>See all</p>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              gap: '15px',
+              flexWrap: 'wrap',
+            }}
+          >
+            {Followinguser.map((item) => (
+              <Link
+                style={{ textDecoration: 'none' }}
+                to={`/Profile/${item._id}`}
+              >
+                <div className='followingfollow' style={{padding: '5px 8px'}} key={item._id}>
+                  <img
+                    src={`${item?.profile}`}
+                    className="friendimage"
+                    alt=""
+                  />
+                  <p
+                    style={{
+                      fontSize: 19,
+                      fontWeight: 500,
+                      fontStyle: 'italic',
+                      color: '#fff',
+                    }}
+                  >
+                    {item?.username}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </Stack>
       </div>
     </div>
   );

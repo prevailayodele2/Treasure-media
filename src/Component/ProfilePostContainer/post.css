@@ -1,26 +1,40 @@
-/* .PostContainer{
-
-} */
+.PostContaineraa{
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+} 
 
 .SubPostContainer{
-          width: 93%;
-          background-color: white;
-          margin-top: 20px;
-          margin-left: 20px;
-          border-radius: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #28353e;
+    background: #28353e;
 }
 
-.PostImage{
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          margin-left: 10px;
+.post-caption-profile{
+    display: flex;
+    font-size: 19px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    width: auto;
+    flex-wrap: wrap;
+}
+.profilepost-post{
+  padding: 5px 18px;
+}
+
+.PostImagez{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 .PostImages{
-          width: 500px;
-          height: 450px;
-          object-fit: cover;
-          border-radius: 10px;
+    width: 600px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .iconsforPost{
@@ -30,16 +44,14 @@
 
 .moreicons{
           width: 20px;
-          margin-left: 380px;
 }
 
 .commentinput{
           width: 24pc;
-          margin-left: 10px;
           border: none;
 
 }
-.addCommentbtn{
+/* .addCommentbtn{
           padding: 9px;
           border: none;
           background-color: black;
@@ -49,4 +61,4 @@
           cursor: pointer;
           padding-left: 40px;
           padding-right: 40px;
-}
+} */

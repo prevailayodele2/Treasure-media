@@ -8,6 +8,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import Follow from './Follow';
 import { useSelector } from 'react-redux';
+import { Stack, Divider } from '@mui/material';
 export default function Rightbar() {
   const userDetails = useSelector((state)=>state.user);
   let user = userDetails?.user;
@@ -45,18 +46,15 @@ export default function Rightbar() {
 
       </div>
 
-      <div className='rightcontainer2'>
-        <h3 style={{textAlign:"start" , marginLeft:"10px"}}>Suggested for you</h3>
+      <div className='rightsuggestcontainer2'>
+        <Stack sx={{ display: 'flex', justifyContent:'center'}} p={3} >
+        <h3 style={{color: '#fff',}}>Suggested for you</h3>
+        <Divider  />
         {users.map((item)=>(
           <Follow userdetails={item}/>
           ))}
-        
-
-        
-
+          </Stack>
       </div>
-
-
     </div>
   )
 }
