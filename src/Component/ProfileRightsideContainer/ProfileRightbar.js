@@ -47,7 +47,7 @@ export default function ProfileRightbar() {
   return (
     <div className="Profilerightbarr">
       <div className="profilerightcontainercc">
-        <Stack p={2}>
+        <Stack p={1}>
           <h3>Followers</h3>
           <Divider />
           <div
@@ -75,7 +75,7 @@ export default function ProfileRightbar() {
                   />
                   <p
                     style={{
-                      fontSize: 19,
+                      fontSize: 17,
                       fontWeight: 500,
                       fontStyle: 'italic',
                       color: '#fff',
@@ -91,10 +91,10 @@ export default function ProfileRightbar() {
       </div>
 
       <div className="rightcontainer23">
-        <Stack p={2}>
-          <h3 style={{ textAlign: 'start', color: '#fff', }}>Suggested for you</h3>
-          {users.map((item) => (
-            <Follow userdetails={item} />
+        <Stack p={1}>
+          <h3 style={{ textAlign: 'start',marginLeft: 10, color: '#fff', }}>Suggested for you</h3>
+          {users.map((item, i) => (
+            <Follow key={i} userdetails={item} />
           ))}
         </Stack>
       </div>

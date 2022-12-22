@@ -1,11 +1,11 @@
 .PostContaineraa{
-    width: 90%;
+    width: 92%;
     height: auto;
     border-radius: 10px;
 } 
 
 .SubPostContainer{
-    padding: 20px;
+    padding: 15px;
     border-radius: 20px;
     background-color: #28353e;
     background: #28353e;
@@ -13,26 +13,27 @@
 
 .post-caption-profile{
     display: flex;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 400;
     color: #fff;
     text-transform: capitalize;
     width: auto;
     flex-wrap: wrap;
 }
+
 .profilepost-post{
   padding: 5px 18px;
 }
 
 .PostImagez{
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     object-fit: cover;
 }
 .PostImages{
-    width: 600px;
-    height: 550px;
+    width: 410px;
+    height: 490px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -40,6 +41,9 @@
 .iconsforPost{
           width: 20px;
           
+}
+.comment-show-container{
+    border-bottom: 1px solid #28353e;
 }
 
 .moreicons{
@@ -50,6 +54,11 @@
           width: 24pc;
           border: none;
 
+}
+.write-coment-post{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 /* .addCommentbtn{
           padding: 9px;

@@ -9,6 +9,7 @@ import Resetpassword from './Pages/Resetpassword/Resetpassword';
 import Verifyemail from './Pages/VerifyEmail/Verifyemail';
 import Forgotpassword from './Pages/Forgotpassword/Forgotpassword';
 import Error from './Pages/404/Error';
+import Chat from './Pages/Chat/Chat';
 
 function App() {
   const userDetails = useSelector((state) => state.user);
@@ -54,6 +55,7 @@ function App() {
           <Route path="/forgot/password" element={<Forgotpassword />} />
           <Route path="/reset/password" element={<Resetpassword />} />
           <Route path="/404" element={<Error />} />
+          <Route path="/chat" element={<Chat />} />
         </Routes>
       </BrowserRouter>
     </div>

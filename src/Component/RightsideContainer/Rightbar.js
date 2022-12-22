@@ -25,7 +25,6 @@ export default function Rightbar() {
     }
     getuser();
   }, [id])
-  console.log(users)
   return (
     <div className='rightbar'>
       <div className='rightcontainer'>
@@ -47,8 +46,8 @@ export default function Rightbar() {
       </div>
 
       <div className='rightsuggestcontainer2'>
-        <Stack sx={{ display: 'flex', justifyContent:'center', width: '100%', height: '100%', overflowY: 'scroll'}}  p={3} >
-        <h3 style={{color: '#fff',}}>Suggested for you</h3>
+        <Stack sx={{ display: 'flex', justifyContent:'center', width: '100%', height: '100%', overflowY: 'scroll'}}  p={1.5} >
+        <h4 style={{color: '#fff',}}>Sugested for you</h4>
         <Divider  />
         {users.map((item)=>(
           <Follow userdetails={item}/>

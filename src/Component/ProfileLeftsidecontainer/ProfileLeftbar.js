@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './profileleftbar.css';
-import image from '../Images/Profile.png';
+// import image from '../Images/Profile.png';
 //import image2 from '../Images/image2.jpg';
 import { useState } from 'react';
 import axios from 'axios';
@@ -16,7 +16,6 @@ export default function ProfileLeftbar() {
     user.other.Following.includes(id) ? 'Unfollow' : 'Follow',
   ]);
   const accessToken = user.accessToken;
-  console.log(accessToken);
   //let username = user?.other?.username;
 
   const [users, setuser] = useState([]);
@@ -75,95 +74,86 @@ export default function ProfileLeftbar() {
     }
   };
 
-  console.log(Followinguser);
-
   return (
     <div className="ProfileLeftbar">
       <div className="NotificationsContainer">
-        <img src={`${image}`} className="ProfilepageCover" alt="" />
-        <div style={{ display: 'flex', alignItems: 'center', marginTop: -30 }}>
+        {/* <img src={`${image}`} className="ProfilepageCover" alt="" /> */}
+        <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', lineHeight: '3px', paddingTop: '10px' }}>
           <img src={`${users.profile}`} className="Profilepageimage" alt="" />
           <div>
             <p
               style={{
-                marginLeft: 6,
-                marginTop: 20,
-                color: 'black',
-                textAlign: 'start',
+                color: '#fff',
+                fontSize: 19,
+                fontWeight: 500,
               }}
             >
               {users.username}
             </p>
             <p
               style={{
-                marginLeft: 6,
-                color: 'black',
+                color: '#fff',
                 textAlign: 'start',
-                marginTop: -16,
-                fontSize: 11,
+                fontSize: 13,
               }}
             >
               Software Developer
             </p>
           </div>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <p style={{ color: 'black', marginLeft: 20, fontSize: '14px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+          <p style={{ color: 'black',  fontSize: '14px' }}>
             Followings
           </p>
           <p
             style={{
-              color: 'black',
-              marginRight: 20,
+              color: '#fff',
               fontSize: '12px',
-              marginTop: 17,
             }}
           >
             {followingCounter}
           </p>
         </div>
+        <Stack display={'flex'} flexDirection='column' lineHeight={'1px'}>
+
 
         <div
           style={{
             display: 'flex',
-            justifyContent: 'space-between',
-            marginTop: -20,
+            justifyContent: 'space-around',
           }}
         >
-          <p style={{ color: 'black', marginLeft: 20, fontSize: '14px' }}>
+          <p style={{ color: 'black',  fontSize: '14px' }}>
             Followers
           </p>
           <p
             style={{
-              color: 'black',
-              marginRight: 20,
+              color: '#fff',
               fontSize: '12px',
-              marginTop: 17,
             }}
-          >
+            >
             {followersCounter}
           </p>
         </div>
-        <div style={{ marginTop: -20 }}>
+          </Stack>
+        <div style={{  }}>
           <h5
             style={{
-              color: 'black',
+              color: '#fff',
               marginLeft: 10,
               fontSize: '14px',
-              marginRight: 30,
-              marginTop: 30,
               textAlign: 'start',
             }}
-          >
+            >
             User bio
           </h5>
           <p
             style={{
-              color: 'black',
+              color: '#fff',
               fontSize: '12px',
-              marginTop: -20,
               textAlign: 'start',
-              marginLeft: '10px',
+              lineHeight: '13px',
+              marginLeft: 10
             }}
           >
             I would rather be despised of who I am, rather than loved by who I
@@ -174,12 +164,14 @@ export default function ProfileLeftbar() {
           <div onClick={handleFollow}>
             <button
               style={{
-                width: '100%',
-                paddingTop: 7,
-                paddingBottom: 7,
+                width: '90%',
                 border: 'none',
                 backgroundColor: 'green',
                 color: 'white',
+                marginBottom: 10,
+                borderRadius: '10px',
+                cursor: 'pointer',
+                padding: '5px 0px',
               }}
             >
               {Follow}
@@ -189,12 +181,14 @@ export default function ProfileLeftbar() {
           <div>
             <button
               style={{
-                width: '100%',
-                paddingTop: 7,
-                paddingBottom: 7,
+                width: '90%',
                 border: 'none',
                 backgroundColor: 'green',
                 color: 'white',
+                marginBottom: 10,
+                borderRadius: '10px',
+                cursor: 'pointer',
+                padding: '5px 0px',
               }}
             >
               Edit Bio
@@ -204,17 +198,16 @@ export default function ProfileLeftbar() {
       </div>
 
       <div className="NotificationsContainer">
-        <Stack p={2}>
-          <h3>Followings</h3>
+        <Stack p={1}>
+          <h4>Followings</h4>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <p style={{}}>Friends</p>
-            <p style={{ color: '#aaa' }}>See all</p>
+            <p style={{ color: '#aaa', cursor: 'pointer' }}>See all</p>
           </div>
           <div
             style={{
               display: 'flex',
               flexDirection: 'row',
-              gap: '15px',
               flexWrap: 'wrap',
             }}
           >
@@ -231,7 +224,7 @@ export default function ProfileLeftbar() {
                   />
                   <p
                     style={{
-                      fontSize: 19,
+                      fontSize: 16,
                       fontWeight: 500,
                       fontStyle: 'italic',
                       color: '#fff',

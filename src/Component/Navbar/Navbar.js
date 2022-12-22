@@ -4,8 +4,8 @@ import searchIcon from '../Images/search.png';
 import { Bell, CaretDown, ChatDots } from 'phosphor-react';
 // import Notifications from '../Images/bell.png';
 // import Message from '../Images/message.png';
-import Profileimage from '../Images/Profile.png';
-// import { Link } from 'react-router-dom';
+// import Profileimage from '../Images/Profile.png';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../ReduxContainer/userReducer';
 import Popup from './Popup';
@@ -43,7 +43,9 @@ export default function Navbar() {
       </div>
       <div className="IconsContainer">
         <Bell size={26} color="#fff" />
+        <Link to='/chat'>
         <ChatDots size={26} color={'#fff'} />
+        </Link>
         {/* <Link to={`/Profile/${id}`}> */}
         <div
           className="profile"
@@ -57,7 +59,7 @@ export default function Navbar() {
             />
           {/* <img src={Profileimage} className="ProfileImage" alt="" /> */}
           <p>{user?.other?.username}</p>
-          <CaretDown color="#fff" size={22} />
+          <CaretDown color="#fff" size={21} />
         </div>
         {
           <Popup

@@ -173,7 +173,7 @@ export default function ContentPost() {
             <div className='post-footer-first-div'>
               <Tooltip title='Upload Photo' placement='bottom'>
               <label className='photos' htmlFor="file">
-               <ImageSquare size={24} color='#41e30b' />
+               <ImageSquare size={20} color='#41e30b' />
                 <span>Photos</span>
                 <input
                   type="file"
@@ -190,7 +190,7 @@ export default function ContentPost() {
               {/* <img src={`${emojiIcon}`} className="icons" alt="" /> */}
               <Tooltip title='Upload Video' placement='bottom'>
               <label className='videos' htmlFor="file2">
-                <YoutubeLogo size={24} color='blue' />
+                <YoutubeLogo size={20} color='blue' />
                 <span>Video</span>
                 <input
                   type="file"
@@ -211,7 +211,7 @@ export default function ContentPost() {
               onClick={handlePost}
               >
               Post
-              <PaperPlaneTilt size={21} color='#fff' />
+              <PaperPlaneTilt size={20} color='#fff' />
             </button>
               </Tooltip>
           </div>

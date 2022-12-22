@@ -1,11 +1,11 @@
 .PostContainerdd{
-    width: 87%;
+    width: 81%;
     height: auto;
     border-radius: 10px;
 }
 
 .SubPostContainerss {
- padding: 20px;
+ padding: 16px;
  border-radius: 20px;
  background-color: #28353e;
  background: #28353e;
@@ -22,7 +22,7 @@
 }
 .post-captionss p{
     display: flex;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 400;
     color: #fff;
     text-transform: capitalize;
@@ -31,15 +31,15 @@
 }
 
 .PostImage {
-  width: 65px;
-  height: 65px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   object-fit: cover;
 }
 .PostImagess {
-  width: 600px;
+  width: 410px;
   max-width: 600px;
-  height: 550px;
+  height: 490px;
   max-height: 550px;
   object-fit: cover;
   border-radius: 10px;

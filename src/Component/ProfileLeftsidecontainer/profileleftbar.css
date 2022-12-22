@@ -1,32 +1,31 @@
 .ProfileLeftbar {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     flex: 1;
     margin-top: 20px;
 }
 
 .NotificationsContainer {
-  width: 18pc;
+  width: 16pc;
   height: auto;
-  max-height: 50vh;
   background-color: #28353e;
   background: #28353e;
   border-radius: 20px;
+  line-height: 5px;
   /* overflow: hidden;
   overflow-y: scroll; */
 }
-.NotificationsContainer h3{
+.NotificationsContainer h4{
     color: #fff;
     font-style: italic;
  }
 
 .Profilepageimage {
-  width: 60px;
-  border-radius: 50%;
-  height: 60px;
+  width: 140px;
+  border-radius: 10px;
+  height: 110px;
   object-fit: cover;
-  margin-left: 10px;
 }
 .ProfilepageCover {
   width: 270px;
@@ -35,8 +34,8 @@
 }
 
 .friendimage {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
   border-radius: 10px;
 }

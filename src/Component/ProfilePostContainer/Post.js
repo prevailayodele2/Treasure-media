@@ -12,6 +12,8 @@ import { DotsThreeOutlineVertical, PaperPlaneTilt } from 'phosphor-react';
 import { Divider, Stack } from '@mui/material';
 import { useSelector } from 'react-redux';
 import PostPopup from '../PostContainer/PostPopup';
+
+
 export default function Post({ detail }) {
   const [Comments, setComments] = useState(detail.comments);
   const [commentwriting, setcommentwriting] = useState('');
@@ -108,12 +110,12 @@ export default function Post({ detail }) {
               alignItems: 'center',
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
               <img src={`${user.profile}`} className="PostImagez" alt="" />
               <p
                 style={{
                   color: '#fff',
-                  fontSize: '20px',
+                  fontSize: '16px',
                   cursor: 'pointer',
                   fontWeight: 500,
                   fontStyle: 'italic',
@@ -126,7 +128,7 @@ export default function Post({ detail }) {
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
               cursor={'pointer'}
-              size={25}
+              size={20}
               color="#fff"
             />
             {/* <img src={`${Moreoption}`} className="moreicons" alt="" /> */}
@@ -172,7 +174,7 @@ export default function Post({ detail }) {
                 />
                 <p
                   style={{
-                    fontSize: '20px',
+                    fontSize: '16px',
                     color: '#fff',
                     fontWeight: 500,
                     fontStyle: 'italic',
@@ -197,7 +199,7 @@ export default function Post({ detail }) {
                 />
                 <p
                   style={{
-                    fontSize: '20px',
+                    fontSize: '16px',
                     color: '#fff',
                     fontWeight: 500,
                     fontStyle: 'italic',
@@ -219,7 +221,7 @@ export default function Post({ detail }) {
               <img src={`${Shareicon}`} className="iconsforPost" alt="" />
               <p
                 style={{
-                  fontSize: '20px',
+                  fontSize: '16px',
                   color: '#fff',
                   fontWeight: 500,
                   fontStyle: 'italic',
@@ -230,11 +232,11 @@ export default function Post({ detail }) {
             </div>
           </div>
           {show && (
-            <div style={{ padding: '10px' }}>
+            <div style={{ borderBottom: '3px solid #28353e'}}>
               <div className="write-coment-post">
                 <img
                   src={`${users.other.profile}`}
-                  className="PostImage"
+                  className="PostImagez"
                   loading="lazy"
                   alt=""
                 />
@@ -254,7 +256,7 @@ export default function Post({ detail }) {
                   {item.profile === '' ? (
                     <img
                       src={`https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`}
-                      className="PostImage"
+                      className="PostImagez"
                       loading="lazy"
                       alt=""
                     />
@@ -273,10 +275,10 @@ export default function Post({ detail }) {
                     justifyContent="center"
                     textAlign={'start'}
                   >
-                    <p style={{ fontSize: 20, fontWeight: 500, color: '#fff' }}>
+                    <p style={{ fontSize: 16, fontWeight: 500, color: '#fff' }}>
                       {item.username}
                     </p>
-                    <p style={{ fontSize: 16, fontWeight: 500, color: '#fff' }}>
+                    <p style={{ fontSize: 15, fontWeight: 500, color: '#fff' }}>
                       {item.comment}
                     </p>
                     <p

@@ -1,0 +1,88 @@
+
+/* left chat */
+.leftChatContainer{
+  flex: 0.4;
+  height: 100%;
+}
+
+.chatpersoncontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    height: 73vh;
+     overflow-y: scroll;
+}
+.chatpersoncontainer .chatpersonttt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+  background-color: #28353e;
+  background: #28353e;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.chatpersoncontainer .chatpersonttt .chatperson{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 9px 20px;
+    align-items: center;
+}
+.chatpersoncontainer .chatpersonttt:hover{
+  background-color: #1c272e;
+}
+.chatpersoncontainer .chatpersonttt .chatperson img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.chatpersoncontainer .chatpersonttt .chatperson p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 2px;
+}
+.chatpersoncontainer .chatpersonttt .chatperson span{
+    color: #fff;
+}
+/* middle */
+.messageChatContainer{
+    width: 100%;
+    height: 62vh;
+    max-height: 100%;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+/* rightside */
+
+.rightchatContainer{
+    flex: 1.2;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: stretch;
+    flex-direction: column;
+}
+.topChatContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 15px;
+    align-items: center;
+    background-color: #28353e;
+    background: #28353e;
+}
+.topChatContainer p{
+    color: #fff;
+}
+.topChatContainer span{
+    color: green;
+}
+.topChatContainer img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}

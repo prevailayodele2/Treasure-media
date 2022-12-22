@@ -110,7 +110,7 @@ export default function Post({ post }) {
             style={{
               display: 'flex',
               flexDirection: 'row',
-              gap: '20px',
+              gap: '14px',
               alignItems: 'center',
             }}
           >
@@ -133,7 +133,7 @@ export default function Post({ post }) {
               <p
                 style={{
                   color: '#fff',
-                  fontSize: '20px',
+                  fontSize: '15px',
                   cursor: 'pointer',
                   fontWeight: 500,
                   fontStyle: 'italic',
@@ -147,7 +147,7 @@ export default function Post({ post }) {
             aria-haspopup="true"
             onClick={handleMobileMenuOpen}
             cursor={'pointer'}
-            size={25}
+            size={20}
             color="#fff"
             
           />
@@ -188,7 +188,7 @@ export default function Post({ post }) {
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '20px',
+              gap: '17px',
               paddingLeft: '20px',
             }}
           >
@@ -209,7 +209,7 @@ export default function Post({ post }) {
               />
               <p
                 style={{
-                  fontSize: '20px',
+                  fontSize: '17px',
                   color: '#fff',
                   fontWeight: 500,
                   fontStyle: 'italic',
@@ -235,7 +235,7 @@ export default function Post({ post }) {
               />
               <p
                 style={{
-                  fontSize: '20px',
+                  fontSize: '17px',
                   color: '#fff',
                   fontWeight: 500,
                   fontStyle: 'italic',
@@ -262,7 +262,7 @@ export default function Post({ post }) {
             />
             <p
               style={{
-                fontSize: '20px',
+                fontSize: '17px',
                 color: '#fff',
                 fontWeight: 500,
                 fontStyle: 'italic',
@@ -316,10 +316,10 @@ export default function Post({ post }) {
                   justifyContent="center"
                   textAlign={'start'}
                 >
-                  <p style={{ fontSize: 20, fontWeight: 500, color: '#fff' }}>
+                  <p style={{ fontSize: 17, fontWeight: 500, color: '#fff' }}>
                     {item.username}
                   </p>
-                  <p style={{ fontSize: 16, fontWeight: 500, color: '#fff' }}>
+                  <p style={{ fontSize: 15, fontWeight: 500, color: '#fff' }}>
                     {item.comment}
                   </p>
                   <p
