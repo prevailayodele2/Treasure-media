@@ -33,6 +33,7 @@
 }
 .PostImages{
     width: 410px;
+    max-width: 600px;
     height: 490px;
     object-fit: cover;
     border-radius: 10px;
