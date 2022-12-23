@@ -99,8 +99,8 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const handleClick = (e) => {
-    setIsLoading(true);
     e.preventDefault();
+    setIsLoading(true);
     login(dispatch, { email, password });
     setIsLoading(false);
   };

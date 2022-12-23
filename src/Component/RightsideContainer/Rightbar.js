@@ -81,8 +81,6 @@ export default function Rightbar() {
           }}
           p={1.5}
         >
-          <h4 style={{ color: '#fff' }}>Sugested for you</h4>
-          <Divider />
           <Stack sx={{
             display: 'flex',
             justifyContent: 'center',
@@ -92,6 +90,8 @@ export default function Rightbar() {
             overflow: 'hidden',
             overflowY: 'scroll',
           }}>
+          <h4 style={{ color: '#fff' }}>Sugested for you</h4>
+          <Divider />
             {users.map((item, i) => (
               <Follow key={i} userdetails={item} />
             ))}
