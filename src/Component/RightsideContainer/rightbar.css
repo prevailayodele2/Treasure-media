@@ -40,7 +40,6 @@
   display: flex ;
   width: 16pc;
   height: auto;
-  max-height: 60vh ;
   flex-direction: column;
   overflow: hidden;
   /* overflow-y: scroll; */

@@ -73,8 +73,6 @@ export default function Rightbar() {
       </div>
 
       <div className="rightsuggestcontainer2">
-            <h4 style={{ color: '#fff', marginLeft: '30px' }}>Sugested for you</h4>
-            <Divider />
         <Stack
           sx={{
             display: 'flex',
@@ -83,11 +81,13 @@ export default function Rightbar() {
           }}
           p={1.5}
         >
+          <h4 style={{ color: '#fff', marginLeft: '30px' }}>Sugested for you</h4>
+          <Divider />
           <Stack sx={{
             display: 'flex',
             justifyContent: 'center',
             width: '100%',
-            height: 'auto',
+            height: '40vh',
             maxHeight: '50vh',
             overflow: 'hidden',
             overflowY: 'scroll',

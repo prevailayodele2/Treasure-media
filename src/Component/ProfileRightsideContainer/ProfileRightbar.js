@@ -96,7 +96,7 @@ export default function ProfileRightbar() {
             display: 'flex',
             justifyContent: 'center',
             width: '100%',
-            height: 'auto',
+            height: '40vh',
             maxHeight: '50vh',
             overflow: 'hidden',
             overflowY: 'scroll',
