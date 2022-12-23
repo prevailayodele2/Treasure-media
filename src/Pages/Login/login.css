@@ -1,52 +1,52 @@
-.mainContainerForsignup{
-          background-color: #f0f2f5;
-          height: 100vh;
+.ddddddddd {
+  background-color: #f0f2f5;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+flex-direction: row;
 }
 
-.submainContainer{
-          display: flex;
-          align-items: center;
-          padding-top: 200px;
+
+.ddddddddd .first-div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+/* .ddddddddd .submainContainerrd .secondd-div {
+  flex: 1;
+  border: 1px solid black;
+}
+.logoText {
+  font-size: 40px;
+}
+.introtext {
+  font-size: 20px;
 }
 
-.logoText{
-          font-size: 40px;
-          text-align: start;
-          margin-top: 0px;
-}
-.introtext{
-          font-size: 20px;
-          text-align: start;
-          margin-top: -40px;
+.createaccountTxts {
+  font-size: 20px;
 }
 
-.createaccountTxt{
-          font-size: 20px;
-          margin-top: 10px;
-          text-align: start;
-          margin-left: 30%;
+.inputTextx {
+  width: 200px;
+  height: 30px;
+  border: none;
+  background-color: inherit;
+  border-radius: 10px;
 }
-
-.inputText{
-          display: flex;
-          margin-left: 30%;
-          width: 40%;
-          margin-top: 20px;
-          padding: 10px;
-          border: none;
-          border-radius: 10px;
+.inputContainerttt{
+    display: flex;
+    background-color: #28353e;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid black;
 }
-
-.btnforsignup{
-          margin-left: 2%;
-          margin-top: 10px;
-          border-radius: 10px;
-          padding-left: 180px;
-          padding-right: 202px;
-          padding-top: 5px;
-          padding-bottom: 5px;
-          cursor: pointer;
+.btnforsignup {
+  border-radius: 10px;
+  cursor: pointer;
 }
-.part{
-          color: rgb(167, 127, 127);
-}
+.part {
+  color: rgb(167, 127, 127);
+} */

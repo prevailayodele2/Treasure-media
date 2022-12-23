@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
+  gap: 20px;
   height: 85vh;
 }
 
@@ -42,6 +43,7 @@
   max-height: 60vh ;
   flex-direction: column;
   overflow: hidden;
+  /* overflow-y: scroll; */
   border-radius: 20px;
   background-color: #28353e;
   background: #28353e;

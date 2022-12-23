@@ -2,20 +2,21 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { VerifyEmail } from '../../Component/ReduxContainer/apiCall';
+import { CircularProgress } from '@mui/material';
 
 export default function Verifyemail() {
   const dispatch = useDispatch();
   const [OTP, setOTP] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const user = useSelector((state) => state.user);
-  console.log(user);
   const userDetails = user.user;
   const id = userDetails?.user;
-  console.log(id);
-  console.log(userDetails);
 
   const handleOTP = (e) => {
+    setIsLoading(true);
     e.preventDefault();
     VerifyEmail(dispatch, { OTP: OTP, user: id });
+    setIsLoading(false);
   };
 
   return (
@@ -25,6 +26,7 @@ export default function Verifyemail() {
         height: '100vh',
         display: 'flex',
         alignItems: 'center',
+        backgroundColor: '#05141c',
         justifyContent: 'center',
       }}
     >
@@ -34,10 +36,10 @@ export default function Verifyemail() {
           padding: '20px',
           margin: 'auto',
           borderRadius: '10px',
-          backgroundColor: 'black',
+          backgroundColor: ' #28353e',
         }}
       >
-        <p>Aavelance Send Email</p>
+        <p>Verify Email</p>
         <form style={{ display: 'flex', flexDirection: 'column' }}>
           <input
             type={'number'}
@@ -56,15 +58,24 @@ export default function Verifyemail() {
               width: '40%',
               border: 'none',
               padding: '10px 20px',
-              backgroundColor: 'white',
+              backgroundColor: '#1a2024',
               color: 'black',
               borderRadius: '10px',
               margin: '20px 0px',
               cursor: 'pointer',
             }}
+            disabled={isLoading}
             onClick={handleOTP}
           >
-            Confirm OTP
+            {isLoading ? (
+              <CircularProgress
+                thickness={2}
+                sx={{ padding: '0px 17px' }}
+                size={22}
+              />
+            ) : (
+              'Confirm OTP'
+            )}
           </button>
           <Link to={'/register'}>
             <p

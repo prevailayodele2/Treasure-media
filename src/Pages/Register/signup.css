@@ -1,51 +1,69 @@
 .mainContainerForsignup{
-          background-color: #f0f2f5;
+          background-color: #05141c;
           height: 100vh;
+          width: 100%;
 }
 
 .submainContainer{
           display: flex;
+          height: 100%;
+
           align-items: center;
-          padding-top: 200px;
 }
 
 .logoText{
           font-size: 40px;
-          text-align: start;
-          margin-top: 0px;
 }
 .introtext{
           font-size: 20px;
-          text-align: start;
-          margin-top: -40px;
 }
 
 .createaccountTxt{
-          font-size: 20px;
-          margin-top: 10px;
-          text-align: start;
-          margin-left: 30%;
+          font-size: 40px;
+          font-weight: 600;
+          font-style: italic;
+          color: #fff;
 }
 
 .inputText{
           display: flex;
-          margin-left: 30%;
-          width: 40%;
-          margin-top: 20px;
-          padding: 10px;
           border: none;
-          border-radius: 10px;
+          width: 300px;
+          height: 31px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #a19c9c;
+          outline: none;
+          background-color:  #28353e;
+}
+
+.signupInputContainer{
+    display: flex;
+    gap: 5px;
+    width: 400px;
+    background-color:  #28353e;
+    align-items: center;
+    padding: 3px 9px;
+    border-radius: 10px;
+}
+.signupInputContainer label{
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
 }
 
 .btnforsignup{
-          margin-left: 2%;
-          margin-top: 10px;
           border-radius: 10px;
-          padding-left: 180px;
-          padding-right: 202px;
-          padding-top: 5px;
-          padding-bottom: 5px;
           cursor: pointer;
+          background-color: #28353e;
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          font-weight: 500;
+          color: #fff;
+}
+.btnforsignup:hover{
+    background-color: #1a2024 ;
 }
 .part{
           color: rgb(167, 127, 127);
