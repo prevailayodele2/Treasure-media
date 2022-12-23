@@ -4,8 +4,8 @@ import { useDispatch } from 'react-redux';
 import './login.css';
 import { useState } from 'react';
 import { login } from '../../Component/ReduxContainer/apiCall';
-import { CircularProgress, Stack } from '@mui/material';
-import { Box, styled, width } from '@mui/system';
+import { CircularProgress } from '@mui/material';
+import {styled} from '@mui/system';
 
 const LoginContainer = styled('div')(({ theme }) => ({
   width: '100%',
@@ -144,11 +144,14 @@ export default function Login() {
               {!isLoading ? (
                 'Continue'
               ) : (
-                <CircularProgress
+                `
+                Loading
+                ${<CircularProgress
                   thickness={2}
                   sx={{ padding: '0px 17px' }}
                   size={22}
-                />
+                />}
+                `
               )}
             </button>
           </InnerContainer>

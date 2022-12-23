@@ -27,7 +27,6 @@ export default function ContentPost() {
   const [imagePre, setImagePre] = useState(null);
   const [VideoPre, setVideoPre] = useState(null);
   const accessToken = user.accessToken;
-  console.log(file?.name);
 
   const handlePost = (e) => {
     e.preventDefault();

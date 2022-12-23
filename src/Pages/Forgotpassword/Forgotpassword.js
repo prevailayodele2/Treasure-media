@@ -23,6 +23,7 @@ export default function Forgotpassword() {
         width: '100vw',
         height: '100vh',
         display: 'flex',
+        backgroundColor: '#05141c',
         alignItems: 'center',
         justifyContent: 'center',
       }}
@@ -33,7 +34,7 @@ export default function Forgotpassword() {
           padding: '20px',
           margin: 'auto',
           borderRadius: '10px',
-          backgroundColor: 'black',
+          backgroundColor: ' #28353e',
         }}
       >
         <p style={{ color: 'white' }}>Enter your Email</p>
@@ -55,7 +56,7 @@ export default function Forgotpassword() {
               width: '40%',
               border: 'none',
               padding: '10px 20px',
-              backgroundColor: 'white',
+              backgroundColor: '#1a2024',
               color: 'black',
               borderRadius: '10px',
               margin: '20px 0px',

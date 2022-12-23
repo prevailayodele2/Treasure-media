@@ -40,7 +40,7 @@ const RightContainer = ({ currentChat }) => {
     const getMessages = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/chat/get/chat/msg/${id}/${currentChat?._id}`,
+          `https://treasure-media-api.onrender.com/api/chat/get/chat/msg/${id}/${currentChat?._id}`,
           {
             headers: {
               token: accesstoken,

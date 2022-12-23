@@ -5,9 +5,7 @@ import { useLocation } from 'react-router-dom';
 export default function Resetpassword() {
   const location = useLocation();
   const code = location.search.split('?')[1];
-  console.log(code);
   const [password, setpassword] = useState('');
-  console.log(password);
   const handleClick = async (e) => {
     e.preventDefault();
     await fetch(`https://treasure-media-api.onrender.com/api/user/reset/password?${code}`, {
@@ -24,6 +22,7 @@ export default function Resetpassword() {
         width: '100vw',
         height: '100vh',
         display: 'flex',
+        backgroundColor: '#05141c',
         alignItems: 'center',
         justifyContent: 'center',
       }}
@@ -34,7 +33,7 @@ export default function Resetpassword() {
           padding: '20px',
           margin: 'auto',
           borderRadius: '10px',
-          backgroundColor: 'black',
+          backgroundColor: ' #28353e',
         }}
       >
         <p style={{ color: 'white' }}>Enter Your New Password</p>
@@ -56,7 +55,7 @@ export default function Resetpassword() {
               width: '40%',
               border: 'none',
               padding: '10px 20px',
-              backgroundColor: 'white',
+              backgroundColor: '#1a2024',
               color: 'black',
               borderRadius: '10px',
               margin: '20px 0px',

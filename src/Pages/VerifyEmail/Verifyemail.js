@@ -68,11 +68,14 @@ export default function Verifyemail() {
             onClick={handleOTP}
           >
             {isLoading ? (
-              <CircularProgress
-                thickness={2}
-                sx={{ padding: '0px 17px' }}
-                size={22}
-              />
+               `
+               Loading
+               ${<CircularProgress
+                 thickness={2}
+                 sx={{ padding: '0px 17px' }}
+                 size={22}
+               />}
+               `
             ) : (
               'Confirm OTP'
             )}

@@ -87,7 +87,8 @@ export default function Rightbar() {
             display: 'flex',
             justifyContent: 'center',
             width: '100%',
-            height: 'calc(60vh - 10vh)',
+            height: 'auto',
+            maxHeight: '50vh',
             overflow: 'hidden',
             overflowY: 'scroll',
           }}>

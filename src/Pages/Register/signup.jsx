@@ -15,7 +15,7 @@ import { CircularProgress } from '@mui/material';
 
 export default function Signup() {
   const dispatch = useDispatch();
-  const { isFetching, error } = useSelector((state) => state.user);
+  // const { isFetching, error } = useSelector((state) => state.user);
   const user = useSelector((state) => state.user);
   console.log(user);
   const [email, setEmail] = useState('');
@@ -151,11 +151,14 @@ export default function Signup() {
             onClick={handleClick}
           >
             {isLoading ? (
-              <CircularProgress
+              `
+              Loading
+              ${<CircularProgress
                 thickness={2}
                 sx={{ padding: '0px 17px' }}
                 size={22}
-              />
+              />}
+              `
             ) : (
               'Signup'
             )}

@@ -30,10 +30,9 @@ const Chat = () => {
     };
     getUser();
   }, [id, accesstoken]);
-  console.log(currentChat);
   useEffect(() => {
     if (currentChat !== '') {
-      socket.current = io('http://localhost:5000');
+      socket.current = io('https://treasure-media-api.onrender.com');
       socket?.current?.emit('addUser', id);
     }
   }, [id, currentChat]);

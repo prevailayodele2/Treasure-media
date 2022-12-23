@@ -155,7 +155,7 @@ const Footer = ({ accesstoken,currentChat,message,setMessages,allMessage, id, se
       message: message
     })
 
-    fetch(`http://localhost:5000/api/chat/msg`, {
+    fetch(`https://treasure-media-api.onrender.com/api/chat/msg`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/JSON', token: accesstoken },
       body: JSON.stringify({
