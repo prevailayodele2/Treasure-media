@@ -1,6 +1,7 @@
 .home{    
     width: 100%;
     height: auto;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: #05141c;

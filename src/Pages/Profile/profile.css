@@ -1,6 +1,9 @@
 .ProfileContainer{
     background-color: #05141c;
     background: rgb(5,20,28);
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
 
 }
 
