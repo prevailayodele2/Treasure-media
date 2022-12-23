@@ -5,6 +5,7 @@ import Follow from '../RightsideContainer/Follow';
 import { useSelector } from 'react-redux';
 import { Divider, Stack } from '@mui/material';
 import { useLocation } from 'react-router-dom';
+
 export default function ProfileRightbar() {
   const userDetails = useSelector((state) => state.user);
   let user = userDetails.user;
@@ -26,7 +27,6 @@ export default function ProfileRightbar() {
     getFollowing();
   }, [id]);
 
-  console.log(Followinguser);
 
   const [users, setUsers] = useState([]);
   useEffect(() => {
@@ -42,7 +42,6 @@ export default function ProfileRightbar() {
     };
     getuser();
   }, [idforSuggest]);
-  console.log(users);
 
   return (
     <div className="Profilerightbarr">
@@ -93,9 +92,19 @@ export default function ProfileRightbar() {
       <div className="rightcontainer23">
         <Stack p={1}>
           <h3 style={{ textAlign: 'start',marginLeft: 10, color: '#fff', }}>Suggested for you</h3>
+          <Stack sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            width: '100%',
+            height: 'auto',
+            maxHeight: '50vh',
+            overflow: 'hidden',
+            overflowY: 'scroll',
+          }}>
           {users.map((item, i) => (
             <Follow key={i} userdetails={item} />
-          ))}
+            ))}
+            </Stack>
         </Stack>
       </div>
     </div>

@@ -209,6 +209,11 @@ export default function ProfileLeftbar() {
               display: 'flex',
               flexDirection: 'row',
               flexWrap: 'wrap',
+              width: '100%',
+              height: 'auto',
+              maxHeight: '50vh',
+              overflow: 'hidden',
+              overflowY: 'scroll',
             }}
           >
             {Followinguser.map((item) => (
