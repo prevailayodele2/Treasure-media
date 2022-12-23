@@ -90,6 +90,7 @@ export default function ProfileRightbar() {
       </div>
 
       <div className="rightcontainer23">
+          <h3 style={{ textAlign: 'start',marginLeft: 10, color: '#fff', }}>Suggested for you</h3>
         <Stack p={1}>
           <Stack sx={{
             display: 'flex',
@@ -100,7 +101,6 @@ export default function ProfileRightbar() {
             overflow: 'hidden',
             overflowY: 'scroll',
           }}>
-          <h3 style={{ textAlign: 'start',marginLeft: 10, color: '#fff', }}>Suggested for you</h3>
           {users.map((item, i) => (
             <Follow key={i} userdetails={item} />
             ))}
